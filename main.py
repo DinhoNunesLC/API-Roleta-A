@@ -30,10 +30,10 @@ def extracao():
     return resultado
 
 def atualizar_tela():
+    global check_resultado
     while True:
         extracao()
         if resultado != check_resultado:
-            global check_resultado
             check_resultado = resultado
             resultado_label.config(text=" ".join(resultado))
         time.sleep(2)
